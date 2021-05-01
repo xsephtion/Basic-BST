@@ -38,7 +38,7 @@ const postOrder = (root) =>{
 }
 
 const search = (root, key) => {
-    if(!root || root === key) return root
+    if(!root || root.val === key) return root
     else if(root.val < key){
         return search(root.right, key);
     }else if(root.val > key){
@@ -55,8 +55,8 @@ var r = new BST(21);
 for (const val of listArr){
     r = insert(r, val);
 }
-const res = search(r, 22);
-if(res) console.log(res);
+const res = search(r, 18);
+if(res) console.log(res.val);
 else console.log("Not Found")
 
 console.log("Inorder: ")

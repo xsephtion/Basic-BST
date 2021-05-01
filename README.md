@@ -1,3 +1,1 @@
-# Binary Search Tree Inorder
-
-Binary Search Tree InOrder Using NodeJS
+# Binary Search Tree Inorder, Preorder, Postorder Using NodeJS

@@ -25,6 +25,18 @@ const inOrder = (root) =>{
     if(root.right) inOrder(root.right);
 }
 
+const preOrder = (root) =>{
+    console.log(root.val);
+    if(root.left) preOrder(root.left);
+    if(root.right) preOrder(root.right);
+}
+
+const postOrder = (root) =>{
+    if(root.left) postOrder(root.left);
+    if(root.right) postOrder(root.right);
+    console.log(root.val);
+}
+
 const search = (root, key) => {
     if(!root || root === key) return root
     else if(root.val < key){
@@ -46,3 +58,10 @@ for (const val of listArr){
 const res = search(r, 22);
 if(res) console.log(res);
 else console.log("Not Found")
+
+console.log("Inorder: ")
+inOrder(r)
+console.log("Preorder: ")
+preOrder(r)
+console.log("Postorder: ")
+postOrder(r)
